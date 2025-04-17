@@ -98,7 +98,7 @@
         Simply fill out the form below to participate.
       </p>
 
-      <!-- The form will now redirect to hacked.html after submission -->
+      <!-- The form will now reset and redirect to hacked.html after submission -->
       <form onsubmit="redirectToHackedPage(event)">
         <label for="fullname"
           >Full Name <span class="required-star">*</span></label
@@ -128,11 +128,18 @@
         Winners will be notified via email on the next day.
       </div>
     </div>
-    <!-- JavaScript function to handle form redirection -->
+
+    <!-- JavaScript function to handle form redirection and reset -->
     <script>
       function redirectToHackedPage(event) {
-        event.preventDefault(); // Prevent default form submission
-        window.location.href = "hacked.html"; // Redirect to hacked page
+        // Prevent default form submission
+        event.preventDefault();
+
+        // Clear the form fields
+        document.querySelector("form").reset();
+
+        // Redirect to hacked page
+        window.location.href = "hacked.html";
       }
     </script>
   </body>
