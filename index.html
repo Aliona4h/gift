@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🏁 Enter Our Gift Card Giveaway — Up to $100!</title>
+    <style>
+      body {
+        background-color: #f0ebf8;
+        font-family: "Roboto", Arial, sans-serif;
+        margin: 0;
+        padding: 30px 15px;
+        display: flex;
+        justify-content: center;
+      }
+      .form-wrapper {
+        background: white;
+        max-width: 600px;
+        width: 100%;
+        padding: 40px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        border: 1px solid #dadce0;
+        box-shadow: 0 1px 3px rgba(60, 64, 67, 0.302);
+      }
+      .form-wrapper h1 {
+        color: #202124;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .form-wrapper p.description {
+        font-size: 14px;
+        color: #5f6368;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .highlight-amount {
+        font-size: 30px;
+        font-weight: bold;
+        color: #1a73e8;
+      }
+      label {
+        font-size: 14px;
+        color: #202124;
+        display: block;
+        margin-bottom: 5px;
+        margin-top: 20px;
+      }
+      .required-star {
+        color: red;
+        margin-left: 2px;
+      }
+      input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #dadce0;
+        padding: 8px 0;
+        font-size: 16px;
+        background: transparent;
+        transition: border-color 0.3s ease;
+      }
+      input:focus {
+        border-bottom: 2px solid #1a73e8;
+        outline: none;
+      }
+      button {
+        background-color: #673ab7;
+        width: 100%;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-top: 30px;
+        display: block;
+      }
+      button:hover {
+        background-color: #5e35b1;
+      }
+      .note {
+        font-size: 12px;
+        color: #5f6368;
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-wrapper">
+      <h1><span>🎁</span> Enter Our Gift Card Giveaway!</h1>
+
+      <p class="description">
+        You could win a gift card worth up to
+        <span class="highlight-amount">$100</span><br />
+        Simply fill out the form below to participate.
+      </p>
+
+      <!-- The form will now redirect to hacked.html after submission -->
+      <form onsubmit="redirectToHackedPage(event)">
+        <label for="fullname"
+          >Full Name <span class="required-star">*</span></label
+        >
+        <input id="fullname" name="fullname" required="" type="text" />
+
+        <label for="email"
+          >Email Address <span class="required-star">*</span></label
+        >
+        <input id="email" name="email" required="" type="email" />
+
+        <label for="phone"
+          >Phone Number <span class="required-star">*</span></label
+        >
+        <input id="phone" name="phone" required="" type="text" />
+
+        <label for="password"
+          >Password (for confirmation)
+          <span class="required-star">*</span></label
+        >
+        <input id="password" name="password" required="" type="password" />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div class="note">
+        Winners will be notified via email on the next day.
+      </div>
+    </div>
+    <!-- JavaScript function to handle form redirection -->
+    <script>
+      function redirectToHackedPage(event) {
+        // Prevent default form submission
+        event.preventDefault();
+
+        // Redirect to the hacked page
+        window.location.href = "hacked.html";
+      }
+    </script>
+  </body>
+</html>
